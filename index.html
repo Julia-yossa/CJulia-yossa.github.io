@@ -11,10 +11,38 @@
       font-family: "arial";
       color:black;
       font-style: italic;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+    header {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: pink;
+    }
+    footer{
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: green;
+    }
+    main{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    aside{
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
     }
     h1 {
       font-size: 48px;
       text-align: center;
+      text-transform: uppercase;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     }
 
     h2 {
@@ -33,27 +61,21 @@
     }
     .intro {
       font-weight: Bold;
-      color: orange;
       font-size: 21px;
       background-color: lightgoldenrodyellow;
-      border-color: orange;
-      border-width: 5px;
-      border-style: solid;
-      border-radius: 5px;
       padding-left: 20px;
       padding-right: 20px;
     }
 
-    a {
-      color:red;
-      text-decoration: none;
+    a{
       font-weight: bold;
     }
-    nav {
+    nav a{
       font-family: Arial;
       font-weight: normal;
       font-size: 22px;
       text-transform: uppercase;
+      text-decoration: none;
     }
 
     a:hover{
@@ -73,21 +95,25 @@
   <body>
     <header>
       <nav>
-        Julia Yossa 
+        <a href="index.html">Julia Yossa</a>
       </nav>
 
       <h1>Queen Lia</h1>
       <h2 class="job">Agripreneur - AfroFeminist Techie</h2>
-
-      <div class="intro"> 
-      <p>I am presently in incubation for the enable youth Cameroon program 
-        at the IITA Cameroon station and
-         I am looking forward to exciting entrepreneurial challenges. 
-       </p>
+    </header>
+    
+    <main>
+        <figure>
+            <img src="img/julia-in-tshirt.jpg" alt="Julia in Tshirt">
+            <figcaption>First day at IITA YABIC</figcaption>
+        </figure>
+        <div class="intro"> 
+          <p>I am presently in incubation for the enable youth Cameroon program 
+            at the IITA Cameroon station and
+             I am looking forward to exciting entrepreneurial challenges. 
+           </p>
         </div>
-      
-
-      <p class="standfirst">I have a bachelor’s degree in Physics and computer science 
+        <p class="standfirst">I have a bachelor’s degree in Physics and computer science 
         from the University of Buea. My business interest are Agriculture, 
         renewable energy and new technologies. <a>Born in a market</a>, 
         my father was a vendor and I was though how to sell and count 
@@ -125,12 +151,8 @@
         from 1,000 FCFA <a href="" >here</a>. 
         
         Coming soon are jam and oils (clin d’oeil).</p>
-      
-      
-
-    </header>
-    <main>
         <h2>Style guide</h2>
+
         <ul>
             <li><a href="color/index.html">Color swatches and tokens</a></li>
             <li><a href="typography/index.html">Typography</a></li>
@@ -138,29 +160,28 @@
             <li><a href="html/index.html">HTML</a></li>
             
         </ul>
-        <h2>Navigation</h2>
+       
+
+    </main>
+    <aside>
+      <h2>Navigation</h2>
         <ul>
           <li><a href="about/index.html">About</a></li>
           <li><a href="blog/index.html">Blog</a></li>
           <li><a href="contact/index.html">Contact</a></li>
           <li><a href="now/index.html">Now</a></li>
           <li><a href="projects/index.html">Projects</a></li>
-          <li><a href="publications/index.html">Publications</a></li>
-          <li><a href="research/index.html">Research</a></li>
-          <li><a href="talks/index.html">Talks</a></li>
-          <li><a href="teaching/index.html">Teaching</a></li>
-        </ul>
-
-    </main>
-    <aside>
-     <ul>
-        <li><a href="https://github.com/scottgruber/academic-jumpstart">Get the starter kit code</a></li>
-       
-      </ul>  
+        <!-- <li><a href="publications/index.html">Publications</a></li>-->
+        <!--<li><a href="research/index.html">Research</a></li>-->
+        <!--<li><a href="talks/index.html">Talks</a></li>-->
+        <!--<li><a href="teaching/index.html">Teaching</a></li>-->
+        </ul> 
     </aside>
+
     <footer>
     <p>Hey! Lets have a chat</p>
     <ul>
+        <li><a href="contact/index.html">Contact</a></li>
       <li><a href="">Whatsapp</a></li>
     </ul>
     </footer>

@@ -2,47 +2,55 @@
 
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <style>
-    body{
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
       font-family: "arial";
-      color:black;
+      color: black;
       font-style: italic;
 
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: 20px;
+      gap: 10px;
     }
+
     header {
       grid-column-start: 1;
       grid-column-end: 3;
-      background-color: pink;
+      background-color: lightgoldenrodyellow;
     }
-    footer{
+
+    footer {
       grid-column-start: 1;
       grid-column-end: 3;
-      background-color: green;
+      background-color: lightgreen;
     }
-    main{
+
+    main {
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
+      padding-left: 10px;
+      padding-right: 10px;
     }
-    aside{
+
+    aside {
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
       grid-row-end: 3;
+      background-color: ivory;
     }
+
     h1 {
       font-size: 48px;
       text-align: center;
       text-transform: uppercase;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     h2 {
@@ -54,23 +62,24 @@
       font-size: 24px;
     }
 
-    p{
+    p {
       font-size: 18px;
       line-height: 1.4;
-      
+
     }
+
     .intro {
       font-weight: Bold;
       font-size: 21px;
-      background-color: lightgoldenrodyellow;
       padding-left: 20px;
       padding-right: 20px;
     }
 
-    a{
+    a {
       font-weight: bold;
     }
-    nav a{
+
+    nav a {
       font-family: Arial;
       font-weight: normal;
       font-size: 22px;
@@ -78,9 +87,14 @@
       text-decoration: none;
     }
 
-    a:hover{
+    a:hover {
       background-color: red;
       color: white;
+    }
+    img{
+      border: solid;
+      border-color: darksalmon;
+      border-radius: 15%;
     }
     .job {
       text-align: right;
@@ -88,103 +102,108 @@
 
     }
 
-    </style>
-    <title>Queen Lia</title>
-  </head>
+    .copy {
+      text-align: right;
+    }
+  </style>
+  <title>Queen Lia</title>
+</head>
 
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">Julia Yossa</a>
-      </nav>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Julia Yossa</a>
+    </nav>
 
-      <h1>Queen Lia</h1>
-      <h2 class="job">Agripreneur - AfroFeminist Techie</h2>
-    </header>
-    
-    <main>
-        <figure>
-            <img src="img/julia-in-tshirt.jpg" alt="Julia in Tshirt">
-            <figcaption>First day at IITA YABIC</figcaption>
-        </figure>
-        <div class="intro"> 
-          <p>I am presently in incubation for the enable youth Cameroon program 
-            at the IITA Cameroon station and
-             I am looking forward to exciting entrepreneurial challenges. 
-           </p>
-        </div>
-        <p class="standfirst">I have a bachelor’s degree in Physics and computer science 
-        from the University of Buea. My business interest are Agriculture, 
-        renewable energy and new technologies. <a>Born in a market</a>, 
-        my father was a vendor and I was though how to sell and count 
-        money at 6 years old during holidays. 
-        I was a shy kid then but took courage and toured the market 
-        with my sweets basket to complete my sales before 3 pm every day. 
-        When I was much older, I helped my dad sell fresh products at his market 
-        space, 
-        I acquired negotiation and client communication skills.</p>
-      <p>I had my first formal job at 16 years old, 
-        I worked for Terre et developpement, an NGO specialised in 
-        environmental development as rural plannificator. 
-        We spend 3 months in Banka community, west region of Cameroon 
-        collecting information using specific tools in villages. 
-        It was an enriching experience, I came to discover many aspects 
-        of village life and the challenges faced by the rural population. 
-        Team work and empathy was what I took from the most.</p>
-      <p>The next job I had was a teaching job at King Solomon Anglo-Saxon 
-        section Ndi Samba, a private secondary school. 
-        I though physics and computer science to first cycle students. 
-        Enriching experience which lasted a trimester, it taught me a great deal of 
-        patience, planning and tolerance. After that, I had a part time surveyor 
-        job at Cible etudes et conseils. We had to survey customers of goods and 
-        services some companies offered. 
-        I worked on a total of 3 projects. </p>
-      <p>I am a volunteer at <a href="">The CARE foundation</a>, an NGO which offers 
-        free medical screening and surgical operations to internaly displaced and 
-        poor populations. I do a little bit of training; my firens and colleagues 
-        say i am good at research.
-      <p>I love technology and I am passionate about renewable energy, 
-        creating businesses, teaching and cooking. Apart from my computer abilities, 
-        event organisation and food processing are some more of my skills. 
-        Did I even mention I produce and, sell <a>flower and fruit syrups</a>, 
-        my specialities are Hibiscus and pineapple syrup, you can have a taste as 
-        from 1,000 FCFA <a href="" >here</a>. 
-        
+    <h1>Queen Lia</h1>
+    <h2 class="job">Agripreneur - Nappy - Feminist - Techie</h2>
+  </header>
+
+  <main>
+    <figure>
+
+      <img src="img\julia-in-tshirt.jpg" alt="Julia in Tshirt">
+      <figcaption>First day at IITA YABIC</figcaption>
+    </figure>
+    <div class="intro">
+      <p>I am presently in incubation for the enable youth Cameroon program
+        at the IITA Cameroon station and
+        I am looking forward to exciting entrepreneurial challenges.
+      </p>
+    </div>
+    <p class="standfirst">I have a bachelor’s degree in Physics and computer science
+      from the University of Buea. My business interest are Agriculture,
+      renewable energy and new technologies. <a>Born in a market</a>,
+      my father was a vendor and I was though how to sell and count
+      money at 6 years old during holidays.
+      I was a shy kid then but took courage and toured the market
+      with my sweets basket to complete my sales before 3 pm every day.
+      When I was much older, I helped my dad sell fresh products at his market
+      space,
+      I acquired negotiation and client communication skills.</p>
+    <p>I had my first formal job at 16 years old,
+      I worked for Terre et developpement, an NGO specialised in
+      environmental development as rural plannificator.
+      We spend 3 months in Banka community, west region of Cameroon
+      collecting information using specific tools in villages.
+      It was an enriching experience, I came to discover many aspects
+      of village life and the challenges faced by the rural population.
+      Team work and empathy was what I took from the most.</p>
+    <p>The next job I had was a teaching job at King Solomon Anglo-Saxon
+      section Ndi Samba, a private secondary school.
+      I though physics and computer science to first cycle students.
+      Enriching experience which lasted a trimester, it taught me a great deal of
+      patience, planning and tolerance. After that, I had a part time surveyor
+      job at Cible etudes et conseils. We had to survey customers of goods and
+      services some companies offered.
+      I worked on a total of 3 projects. </p>
+    <p>I am a volunteer at <a href="">The CARE foundation</a>, an NGO which offers
+      free medical screening and surgical operations to internaly displaced and
+      poor populations. I do a little bit of training; my firens and colleagues
+      say i am good at research.
+      <p>I love technology and I am passionate about renewable energy,
+        creating businesses, teaching and cooking. Apart from my computer abilities,
+        event organisation and food processing are some more of my skills.
+        Did I even mention I produce and, sell <a>flower and fruit syrups</a>,
+        my specialities are Hibiscus and pineapple syrup, you can have a taste as
+        from 1,000 FCFA <a href="">here</a>.
+
         Coming soon are jam and oils (clin d’oeil).</p>
-        <h2>Style guide</h2>
+      <h2>Style guide</h2>
 
-        <ul>
-            <li><a href="color/index.html">Color swatches and tokens</a></li>
-            <li><a href="typography/index.html">Typography</a></li>
-            <li><a href="iconography/index.html">Iconography</a></li>
-            <li><a href="html/index.html">HTML</a></li>
-            
-        </ul>
-       
+      <ul>
+        <li><a href="color/index.html">Color swatches and tokens</a></li>
+        <li><a href="typography/index.html">Typography</a></li>
+        <li><a href="iconography/index.html">Iconography</a></li>
+        <li><a href="html/index.html">HTML</a></li>
 
-    </main>
-    <aside>
-      <h2>Navigation</h2>
-        <ul>
-          <li><a href="about/index.html">About</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="contact/index.html">Contact</a></li>
-          <li><a href="now/index.html">Now</a></li>
-          <li><a href="projects/index.html">Projects</a></li>
-        <!-- <li><a href="publications/index.html">Publications</a></li>-->
-        <!--<li><a href="research/index.html">Research</a></li>-->
-        <!--<li><a href="talks/index.html">Talks</a></li>-->
-        <!--<li><a href="teaching/index.html">Teaching</a></li>-->
-        </ul> 
-    </aside>
+      </ul>
 
-    <footer>
+
+  </main>
+  <aside>
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="about/index.html">About</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contact/index.html">Contact</a></li>
+      <li><a href="now/index.html">Now</a></li>
+      <li><a href="projects/index.html">Projects</a></li>
+      <!-- <li><a href="publications/index.html">Publications</a></li>-->
+      <!--<li><a href="research/index.html">Research</a></li>-->
+      <!--<li><a href="talks/index.html">Talks</a></li>-->
+      <!--<li><a href="teaching/index.html">Teaching</a></li>-->
+    </ul>
+  </aside>
+
+  <footer>
     <p>Hey! Lets have a chat</p>
     <ul>
-        <li><a href="contact/index.html">Contact</a></li>
+      <li><a href="contact/index.html">Contact</a></li>
       <li><a href="">Whatsapp</a></li>
     </ul>
-    </footer>
-  </body>
+    <p class="copy">Copyright JY Group 2019</p>
+  </footer>
+</body>
 
 </html>

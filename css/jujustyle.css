@@ -1,0 +1,22 @@
+
+body {
+    font-family: "arial";
+    color: black;
+    font-style: italic;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0px;
+  }
+
+  header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: lightgoldenrodyellow;
+  }
+
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: gray;
+  }

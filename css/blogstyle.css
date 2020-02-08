@@ -11,21 +11,23 @@
         font-style: italic;
   
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 10px;
+        grid-template-columns: 1fr 3fr 4fr 1fr  ;
+        gap: 20px;
+        /*grid-template-rows: repeat(4, 200px);*/
+        
       }
   
       header {
         grid-column-start: 1;
-        grid-column-end: 3;
-        background-color: lightgoldenrodyellow
-        ;
+        grid-column-end: 6;
+        background-color: lightgoldenrodyellow;
+        height:;
       }
   
       footer {
         grid-column-start: 1;
-        grid-column-end: 3;
-        background-color: lightgreen;
+        grid-column-end: 6;
+        background-color: coral;
       }
   
       main {
@@ -42,7 +44,7 @@
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
-        background-color: lightgrey;
+        background-color:;
       }
   
       h1 {
@@ -54,15 +56,15 @@
   
       h2 {
         font-style: italic;
-        font-size: 32px;
+        font-size: 3em;
       }
   
       h3 {
-        font-size: 24px;
+        font-size: 2em;
       }
   
       p {
-        font-size: 18px;
+        font-size: 1.25em;
         line-height: 1.4;
   
       }
@@ -84,7 +86,9 @@
         font-weight: normal;
         font-size: 22px;
       }
-  
+  nav ul li a {
+  text-align: right;
+}
       a:hover {
         text-decoration: dashed;
         color: green;
@@ -95,7 +99,7 @@
         border-radius: 15%;
       }
       .job {
-        text-align: right;
+        text-align: center;
         font-family: 'Lucida Sans';
   
       }
@@ -109,4 +113,38 @@
 small{
     color: rosybrown;
     text-align: right;
+}
+.trial{
+ text-align: right;
+}
+h5{
+  text-align: center;
+  font-size: 1.5em;
+}
+.standfirst{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+img{
+  /*max-width: 150%;*/
+}
+.contact{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.work{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.volunteer{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }

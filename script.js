@@ -134,4 +134,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial start of the animation
     restartTypingAnimation();
+
+    // --- BLOG MODAL FUNCTIONALITY ---
+    const modal = document.getElementById('blog-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDate = document.getElementById('modal-date');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('modal-close-btn');
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.bg-gray-900');
+            const title = card.querySelector('h3').getAttribute(`data-lang-${currentLang}`) || card.querySelector('h3').textContent;
+            const date = card.querySelector('p:nth-of-type(1)').getAttribute(`data-lang-${currentLang}`) || card.querySelector('p:nth-of-type(1)').textContent;
+            
+            modalTitle.textContent = title;
+            modalDate.textContent = date;
+
+            const fullContent = card.getAttribute(`data-full-content-${currentLang}`);
+            
+            if (fullContent) {
+                modalContent.innerHTML = fullContent;
+            } else {
+                // Fallback for posts without full content
+                const excerpt = card.querySelector('p:nth-of-type(2)').getAttribute(`data-lang-${currentLang}`) || card.querySelector('p:nth-of-type(2)').textContent;
+                const fullContentEn = `<p>${excerpt}</p><p>This is where the full blog post content would appear. For this demo, we are only showing the excerpt.</p>`;
+                const fullContentFr = `<p>${excerpt}</p><p>C'est ici que le contenu complet de l'article de blog apparaîtrait. Pour cette démo, nous ne montrons que l'extrait.</p>`;
+                modalContent.innerHTML = (currentLang === 'en') ? fullContentEn : fullContentFr;
+            }
+            
+            modal.classList.remove('hidden');
+        });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
 });

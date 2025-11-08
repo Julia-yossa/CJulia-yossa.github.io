@@ -21,7 +21,7 @@
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex space-x-8 ml-auto">
                     <li><a href="#about" class="hover:text-indigo-400 transition-colors" data-lang-en="About" data-lang-fr="À propos">About</a></li>
-                    <li><a href="#projects" class="hover:text-indigo-400 transition-colors" data-lang-en="Projects" data-lang-fr="Projets">Projects</a></li>
+                    <li><a href="#blog" class="hover:text-indigo-400 transition-colors" data-lang-en="Insights" data-lang-fr="Réflexions">Insights</a></li>
                     <li><a href="#contact" class="hover:text-indigo-400 transition-colors" data-lang-en="Contact" data-lang-fr="Contact">Contact</a></li>
                 </ul>
 
@@ -40,7 +40,7 @@
         <div id="mobile-menu" class="hidden md:hidden">
             <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <li><a href="#about" class="block py-2 px-3 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700" data-lang-en="About" data-lang-fr="À propos">About</a></li>
-                <li><a href="#projects" class="block py-2 px-3 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700" data-lang-en="Projects" data-lang-fr="Projets">Projects</a></li>
+                <li><a href="#blog" class="block py-2 px-3 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700" data-lang-en="Insights" data-lang-fr="Réflexions">Insights</a></li>
                 <li><a href="#contact" class="block py-2 px-3 text-base font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700" data-lang-en="Contact" data-lang-fr="Contact">Contact</a></li>
             </ul>
         </div>
@@ -138,68 +138,66 @@
             </div>
         </section>
 
-        <section id="projects" class="py-20 bg-gray-800">
+        <section id="blog" class="py-20 bg-gray-800">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12" data-lang-en="Projects" data-lang-fr="Projets">Projects</h2>
+                <h2 class="text-4xl font-bold text-center mb-12" data-lang-en="Insights" data-lang-fr="Réflexions">Insights</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://picsum.photos/seed/project1/600/400" alt="Project 1" class="w-full h-48 object-cover">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg" 
+                         data-full-content-en="<p class='mb-4'>Zero Trust is a modern security model based on the idea that no user or device should be trusted by default—even inside the network. Every access request must be verified, and systems are designed as if a breach has already occurred.</p><h3 class='text-xl font-bold mb-3'>🔑 Core Principles</h3><ul class='list-disc list-inside mb-4 space-y-2'><li>Verify explicitly: Always authenticate and authorize based on identity and context</li><li>Least privilege: Limit access to only what’s needed</li><li>Assume breach: Monitor continuously and segment systems</li></ul><h3 class='text-xl font-bold mb-3'>🛠️ Tools That Support It</h3><p class='mb-4'>MFA, RBAC, microsegmentation, endpoint compliance, SIEM, and encryption.</p><h3 class='text-xl font-bold mb-3'>🌐 Why It Matters</h3><p class='mb-4'>Zero Trust helps reduce risk, protect hybrid environments, and meet compliance standards.</p><h3 class='text-xl font-bold mb-3'>🧭 My Approach</h3><ul class='list-disc list-inside space-y-2'><li>Designing secure access policies that reflect real-world risks</li><li>Segmenting networks with pfSense and Proxmox to limit exposure</li><li>Leading training workshops that teach users to recognize and respond to threats</li><li>Building risk models that assume breach and prioritize resilience</li></ul>"
+                         data-full-content-fr="<p class='mb-4'>Le Zero Trust est un modèle de sécurité moderne basé sur l'idée qu'aucun utilisateur ou appareil ne doit être approuvé par défaut, même à l'intérieur du réseau. Chaque demande d'accès doit être vérifiée, et les systèmes sont conçus comme si une violation s'était déjà produite.</p><h3 class='text-xl font-bold mb-3'>🔑 Principes Fondamentaux</h3><ul class='list-disc list-inside mb-4 space-y-2'><li>Vérifier explicitement : Toujours authentifier et autoriser en fonction de l'identité et du contexte</li><li>Moindre privilège : Limiter l'accès à ce qui est strictement nécessaire</li><li>Présumer la violation : Surveiller en permanence et segmenter les systèmes</li></ul><h3 class='text-xl font-bold mb-3'>🛠️ Outils de Support</h3><p class='mb-4'>MFA, RBAC, micro-segmentation, conformité des terminaux, SIEM et chiffrement.</p><h3 class='text-xl font-bold mb-3'>🌐 Pourquoi C'est Important</h3><p class='mb-4'>Le Zero Trust aide à réduire les risques, à protéger les environnements hybrides et à respecter les normes de conformité.</p><h3 class='text-xl font-bold mb-3'>🧭 Mon Approche</h3><ul class='list-disc list-inside space-y-2'><li>Concevoir des politiques d'accès sécurisé qui reflètent les risques réels</li><li>Segmenter les réseaux avec pfSense et Proxmox pour limiter l'exposition</li><li>Animer des ateliers de formation qui apprennent aux utilisateurs à reconnaître et à réagir aux menaces</li><li>Élaborer des modèles de risque qui supposent la violation et privilégient la résilience</li></ul>">
+                        <img src="https://picsum.photos/seed/blog1/600/400" alt="Blog Post 1" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-lang-en="Project One" data-lang-fr="Projet Un">Project One</h3>
-                            <p class="text-gray-400 text-sm mb-4" data-lang-en="This is a short description (2-3 sentences) of Project One. It highlights the main goal and impact of the project." data-lang-fr="Ceci est une courte description (2-3 phrases) du Projet Un. Elle met en évidence l'objectif principal et l'impact du projet.">This is a short description (2-3 sentences) of Project One. It highlights the main goal and impact of the project.</p>
-                            <h4 class="text-lg font-semibold mb-2" data-lang-en="Technologies:" data-lang-fr="Technologies:">Technologies:</h4>
-                            <ul class="flex flex-wrap gap-2 mb-4">
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">JavaScript</li>
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">Tailwind CSS</li>
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">Node.js</li>
-                            </ul>
-                            <div class="flex justify-between space-x-4">
-                                <a href="#" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Live Demo" data-lang-fr="Démo en direct">Live Demo</a>
-                                <a href="#" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Source Code" data-lang-fr="Code Source">Source Code</a>
-                            </div>
+                            <h3 class="text-2xl font-bold mb-2" data-lang-en="Understanding Zero Trust" data-lang-fr="Comprendre le Zero Trust">Understanding Zero Trust</h3>
+                            <p class="text-sm text-gray-400 mb-2" data-lang-en="Published on November 8, 2025" data-lang-fr="Publié le 8 novembre 2025">Published on November 8, 2025</p>
+                            <p class="text-gray-400 text-sm mb-4" data-lang-en="A quick look at why Zero Trust matters in cybersecurity." data-lang-fr="Un aperçu rapide de l'importance du Zero Trust en cybersécurité.">A quick look at why Zero Trust matters in cybersecurity.</p>
+                            <button class="read-more-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Read More" data-lang-fr="Lire la Suite">Read More</button>
                         </div>
                     </div>
 
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://picsum.photos/seed/project2/600/400" alt="Project 2" class="w-full h-48 object-cover">
+                    <!-- Blog Post 2 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg"
+                         data-full-content-en="<p class='mb-4'>Balancing a full-time job with ongoing studies isn’t just a time-management challenge—it’s a test of clarity, motivation, and boundaries. It means learning to prioritize deep work over perfection, and progress over pressure.</p><h3 class='text-xl font-bold mb-3'>🔑 What Helps Me Stay Grounded</h3><ul class='list-disc list-inside mb-4 space-y-2'><li>Structured planning: Weekly overviews and visual task boards keep me focused</li><li>Energy-based scheduling: I match complex tasks with my peak focus hours</li><li>Microlearning: I break study sessions into 25-minute sprints</li><li>Boundaries: I protect my evenings and weekends when I need to recharge</li></ul><h3 class='text-xl font-bold mb-3'>🧭 Why It’s Worth It</h3><p>Every course, every late-night reading, feeds directly into my work—whether it’s refining a policy, leading a workshop, or building a more inclusive digital experience. The overlap isn’t a burden—it’s a bridge.</p>"
+                         data-full-content-fr="<p class='mb-4'>Concilier un emploi à temps plein et des études continues n'est pas seulement un défi de gestion du temps, c'est un test de clarté, de motivation et de limites. Cela signifie apprendre à privilégier le travail en profondeur plutôt que la perfection, et le progrès plutôt que la pression.</p><h3 class='text-xl font-bold mb-3'>🔑 Ce Qui M'aide à Rester Ancrée</h3><ul class='list-disc list-inside mb-4 space-y-2'><li>Planification structurée : Des aperçus hebdomadaires et des tableaux de tâches visuels me permettent de rester concentrée</li><li>Planification basée sur l'énergie : J'adapte les tâches complexes à mes heures de concentration maximale</li><li>Micro-apprentissage : Je divise les sessions d'étude en sprints de 25 minutes</li><li>Limites : Je protège mes soirées et mes week-ends lorsque j'ai besoin de me ressourcer</li></ul><h3 class='text-xl font-bold mb-3'>🧭 Pourquoi Ça en Vaut la Peine</h3><p>Chaque cours, chaque lecture tardive, alimente directement mon travail—qu'il s'agisse d'affiner une politique, d'animer un atelier ou de construire une expérience numérique plus inclusive. Le chevauchement n'est pas un fardeau—c'est un pont.</p>">
+                        <img src="https://picsum.photos/seed/blog2/600/400" alt="Blog Post 2" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-lang-en="Project Two" data-lang-fr="Projet Deux">Project Two</h3>
-                            <p class="text-gray-400 text-sm mb-4" data-lang-en="This is a short description (2-3 sentences) of Project Two. It highlights the main goal and impact of the project." data-lang-fr="Ceci est une courte description (2-3 phrases) du Projet Deux. Elle met en évidence l'objectif principal et l'impact du projet.">This is a short description (2-3 sentences) of Project Two. It highlights the main goal and impact of the project.</p>
-                            <h4 class="text-lg font-semibold mb-2" data-lang-en="Technologies:" data-lang-fr="Technologies:">Technologies:</h4>
-                            <ul class="flex flex-wrap gap-2 mb-4">
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">Python</li>
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">Django</li>
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">PostgreSQL</li>
-                            </ul>
-                            <div class="flex justify-between space-x-4">
-                                <a href="#" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Live Demo" data-lang-fr="Démo en direct">Live Demo</a>
-                                <a href="#" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Source Code" data-lang-fr="Code Source">Source Code</a>
-                            </div>
+                            <h3 class="text-2xl font-bold mb-2" data-lang-en="Studying While Working Full Time" data-lang-fr="Étudier en Travaillant à Temps Plein">Studying While Working Full Time</h3>
+                            <p class="text-sm text-gray-400 mb-2" data-lang-en="Published on November 8, 2025" data-lang-fr="Publié le 8 novembre 2025">Published on November 8, 2025</p>
+                            <p class="text-gray-400 text-sm mb-4" data-lang-en="A reflection on navigating dual commitments with purpose and resilience." data-lang-fr="Une réflexion sur la gestion des doubles engagements avec détermination et résilience.">A reflection on navigating dual commitments with purpose and resilience.</p>
+                            <button class="read-more-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Read More" data-lang-fr="Lire la Suite">Read More</button>
                         </div>
                     </div>
 
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://picsum.photos/seed/project3/600/400" alt="Project 3" class="w-full h-48 object-cover">
+                    <!-- Blog Post 3 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg"
+                         data-full-content-en="<h3 class='text-2xl font-bold mb-3'>🤖 The Role of AI in Cybersecurity</h3><p class='mb-4'>AI and Machine Learning (ML) are transforming cybersecurity by enabling systems to detect threats faster and more accurately. Instead of relying solely on predefined rules, ML models learn from patterns—spotting anomalies like unusual login times or data transfers that might signal an attack.</p><h3 class='text-2xl font-bold mb-3'>🧠 Smarter Threat Detection</h3><p class='mb-4'>AI and Machine Learning (ML) are transforming cybersecurity by enabling systems to detect threats faster and more accurately. Instead of relying solely on predefined rules, ML models learn from patterns—spotting anomalies like unusual login times or data transfers that might signal an attack.</p><h3 class='text-2xl font-bold mb-3'>🔄 Real-Time Response</h3><p class='mb-4'>AI-powered tools can automate responses to threats, such as isolating compromised devices or blocking malicious traffic. This reduces reaction time and limits damage, especially in large or distributed networks.</p><h3 class='text-2xl font-bold mb-3'>🧩 Adaptive Defense</h3><p class='mb-4'>Unlike static firewalls, AI systems evolve. They adapt to new attack vectors, learn from past incidents, and improve over time—making them ideal for dynamic environments like cloud infrastructure or remote work setups.</p><h3 class='text-2xl font-bold mb-3'>🧭 My Perspective</h3><p>In my work, I integrate AI principles into risk modeling and user training. Whether it’s teaching teams to recognize phishing patterns or using anomaly detection to secure virtual environments, I see AI as a powerful ally—not a replacement—for human expertise.</p>"
+                         data-full-content-fr="<h3 class='text-2xl font-bold mb-3'>🤖 Le Rôle de l'IA en Cybersécurité</h3><p class='mb-4'>L'IA et l'apprentissage automatique (ML) transforment la cybersécurité en permettant aux systèmes de détecter les menaces plus rapidement et avec plus de précision. Au lieu de se fier uniquement à des règles prédéfinies, les modèles ML apprennent des modèles, repérant les anomalies comme les heures de connexion inhabituelles ou les transferts de données qui pourraient signaler une attaque.</p><h3 class='text-2xl font-bold mb-3'>🧠 Détection Intelligente des Menaces</h3><p class='mb-4'>L'IA et l'apprentissage automatique (ML) transforment la cybersécurité en permettant aux systèmes de détecter les menaces plus rapidement et avec plus de précision. Au lieu de se fier uniquement à des règles prédéfinies, les modèles ML apprennent des modèles, repérant les anomalies comme les heures de connexion inhabituelles ou les transferts de données qui pourraient signaler une attaque.</p><h3 class='text-2xl font-bold mb-3'>🔄 Réponse en Temps Réel</h3><p class='mb-4'>Les outils basés sur l'IA peuvent automatiser les réponses aux menaces, telles que l'isolement des appareils compromis ou le blocage du trafic malveillant. Cela réduit le temps de réaction et limite les dommages, en particulier dans les réseaux étendus ou distribués.</p><h3 class='text-2xl font-bold mb-3'>🧩 Défense Adaptative</h3><p class='mb-4'>Contrairement aux pare-feu statiques, les systèmes d'IA évoluent. Ils s'adaptent aux nouveaux vecteurs d'attaque, apprennent des incidents passés et s'améliorent avec le temps, ce qui les rend idéaux pour les environnements dynamiques comme l'infrastructure cloud ou les configurations de travail à distance.</p><h3 class='text-2xl font-bold mb-3'>🧭 Ma Perspective</h3><p>Dans mon travail, j'intègre les principes de l'IA dans la modélisation des risques et la formation des utilisateurs. Qu'il s'agisse d'apprendre aux équipes à reconnaître les schémas de phishing ou d'utiliser la détection d'anomalies pour sécuriser les environnements virtuels, je vois l'IA comme un allié puissant, et non un substitut, à l'expertise humaine.</p>"
+                    >
+                        <img src="https://picsum.photos/seed/blog3/600/400" alt="Blog Post 3" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-lang-en="Project Three" data-lang-fr="Projet Trois">Project Three</h3>
-                            <p class="text-gray-400 text-sm mb-4" data-lang-en="This is a short description (2-3 sentences) of Project Three. It highlights the main goal and impact of the project." data-lang-fr="Ceci est une courte description (2-3 phrases) du Projet Trois. Elle met en évidence l'objectif principal et l'impact du projet.">This is a short description (2-3 sentences) of Project Three. It highlights the main goal and impact of the project.</p>
-                            <h4 class="text-lg font-semibold mb-2" data-lang-en="Technologies:" data-lang-fr="Technologies:">Technologies:</h4>
-                            <ul class="flex flex-wrap gap-2 mb-4">
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">React</li>
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">Firebase</li>
-                                <li class="bg-indigo-700 text-white text-xs px-2 py-1 rounded-full">Tailwind CSS</li>
-                            </ul>
-                            <div class="flex justify-between space-x-4">
-                                <a href="#" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Live Demo" data-lang-fr="Démo en direct">Live Demo</a>
-                                <a href="#" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Source Code" data-lang-fr="Code Source">Source Code</a>
-                            </div>
+                            <h3 class="text-2xl font-bold mb-2" data-lang-en="The Role of AI in Cybersecurity" data-lang-fr="Le Rôle de l'IA en Cybersécurité">The Role of AI in Cybersecurity</h3>
+                            <p class="text-sm text-gray-400 mb-2" data-lang-en="Published on October 5, 2025" data-lang-fr="Publié le 5 octobre 2025">Published on October 5, 2025</p>
+                            <p class="text-gray-400 text-sm mb-4" data-lang-en="Exploring how Artificial Intelligence and Machine Learning are shaping the future of threat detection and response." data-lang-fr="Explorer comment l'intelligence artificielle et l'apprentissage automatique façonnent l'avenir de la détection et de la réponse aux menaces.">Exploring how Artificial Intelligence and Machine Learning are shaping the future of threat detection and response.</p>
+                            <button class="read-more-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Read More" data-lang-fr="Lire la Suite">Read More</button>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
+
+        <!-- Blog Post Modal -->
+        <div id="blog-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+            <div class="bg-gray-800 rounded-lg shadow-xl p-8 max-w-2xl w-full mx-4">
+                <h2 id="modal-title" class="text-3xl font-bold mb-4"></h2>
+                <p id="modal-date" class="text-sm text-gray-400 mb-4"></p>
+                <div id="modal-content" class="text-gray-300 space-y-4">
+                    <!-- Full blog content will be injected here -->
+                </div>
+                <button id="modal-close-btn" class="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Close" data-lang-fr="Fermer">Close</button>
+            </div>
+        </div>
 
         <section id="contact" class="py-20">
             <div class="container mx-auto px-4">

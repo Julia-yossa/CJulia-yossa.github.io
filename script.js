@@ -69,33 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.toggle('hidden');
     });
 
-    // --- CONTACT FORM SUBMISSION ---
-    // Handles the submission of the contact form.
-    const contactForm = document.getElementById('contact-form');
-    const formConfirmation = document.getElementById('form-confirmation');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-
-            // For demonstration, we just log the data to the console.
-            console.log('Form Submission:', { name, email, message });
-
-            // Reset the form and show a confirmation message
-            contactForm.reset();
-            formConfirmation.classList.remove('hidden');
-
-            // Hide the confirmation message after 5 seconds
-            setTimeout(() => {
-                formConfirmation.classList.add('hidden');
-            }, 5000);
-        });
-    }
 
     // --- TYPING ANIMATION ---
     const englishTitles = ['IT Professional', 'Data Analyst', 'Cybersecurity Analyst', 'AI Engineer', 'IT Project Manager'];

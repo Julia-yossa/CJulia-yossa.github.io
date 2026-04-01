@@ -190,45 +190,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadBlogPosts() {
-        fetch('posts.json')
-            .then(response => response.json())
-            .then(posts => {
-                const blogPostsContainer = document.getElementById('blog-posts');
-                blogPostsContainer.innerHTML = ''; // Clear any existing content
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'posts.json', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    try {
+                        const posts = JSON.parse(xhr.responseText);
+                        const blogPostsContainer = document.getElementById('blog-posts');
+                        blogPostsContainer.innerHTML = ''; // Clear any existing content
 
-                posts.forEach(post => {
-                    const postElement = document.createElement('div');
-                    postElement.className = 'bg-gray-900 rounded-lg overflow-hidden shadow-lg';
+                        posts.forEach(post => {
+                            const postElement = document.createElement('div');
+                            postElement.className = 'bg-gray-900 rounded-lg overflow-hidden shadow-lg';
 
-                    const title = post[`title${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
-                    const date = post[`date${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
-                    const excerpt = post[`excerpt${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
-                    const fullContent = post[`fullContent${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                            const title = post[`title${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                            const date = post[`date${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                            const excerpt = post[`excerpt${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                            const fullContent = post[`fullContent${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
 
-                    postElement.innerHTML = `
-                        <img src="${post.image}" alt="${title}" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">${title}</h3>
-                            <p class="text-sm text-gray-400 mb-2">${date}</p>
-                            <p class="text-gray-400 text-sm mb-4">${excerpt}</p>
-                            <button class="read-more-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Read More" data-lang-fr="Lire la Suite">Read More</button>
-                        </div>
-                    `;
+                            postElement.innerHTML = `
+                                <img src="${post.image}" alt="${title}" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-bold mb-2">${title}</h3>
+                                    <p class="text-sm text-gray-400 mb-2">${date}</p>
+                                    <p class="text-gray-400 text-sm mb-4">${excerpt}</p>
+                                    <button class="read-more-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Read More" data-lang-fr="Lire la Suite">Read More</button>
+                                </div>
+                            `;
 
-                    // Set data attribute for full content
-                    postElement.setAttribute(`data-full-content-${currentLang}`, fullContent);
+                            // Set data attribute for full content
+                            postElement.setAttribute(`data-full-content-${currentLang}`, fullContent);
 
-                    blogPostsContainer.appendChild(postElement);
-                });
+                            blogPostsContainer.appendChild(postElement);
+                        });
 
-                // Re-attach event listeners for the new buttons
-                attachReadMoreListeners();
-            })
-            .catch(error => {
-                console.error('Error loading blog posts:', error);
-                const blogPostsContainer = document.getElementById('blog-posts');
-                blogPostsContainer.innerHTML = '<p class="text-center text-gray-400">Error loading blog posts.</p>';
-            });
+                        // Re-attach event listeners for the new buttons
+                        attachReadMoreListeners();
+                    } catch (e) {
+                        console.error('Error parsing JSON:', e);
+                        const blogPostsContainer = document.getElementById('blog-posts');
+                        blogPostsContainer.innerHTML = '<p class="text-center text-gray-400">Error parsing blog posts.</p>';
+                    }
+                } else {
+                    const blogPostsContainer = document.getElementById('blog-posts');
+                    blogPostsContainer.innerHTML = '<p class="text-center text-gray-400">Error loading blog posts.</p>';
+                }
+            }
+        };
+        xhr.send();
     }
 
     function attachReadMoreListeners() {

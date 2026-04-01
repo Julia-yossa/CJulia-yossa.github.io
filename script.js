@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- TYPING ANIMATION ---
-    const englishTitles = ['IT Professional', 'Data Analyst', 'Cybersecurity Analyst', 'AI Engineer', 'IT Project Manager'];
-    const frenchTitles = ['Professionnelle en TI', 'Analyste de Données', 'Analyste en Cybersécurité', 'Ingénieure en IA', 'Gestionnaire de Projet TI'];
+    const englishTitles = ['Infrastructure Analyst', 'Data Analyst', 'Cybersecurity Analyst', 'AI Engineer', 'IT Project Manager'];
+    const frenchTitles = ['Analyste TI', 'Analyste de Données', 'Analyste en Cybersécurité', 'Ingénieure en IA', 'Gestionnaire de Projet TI'];
     
     let activeTitles = englishTitles; // Default to English
     const typingElement = document.getElementById('typing-text');

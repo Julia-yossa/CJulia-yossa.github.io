@@ -56,6 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Reload blog posts if on blog page
+        if (blogPostsContainer) {
+            loadBlogPosts();
+        }
+
         // Restart typing animation for the new language
         restartTypingAnimation();
     });
@@ -177,4 +182,80 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('hidden');
         }
     });
+
+    // --- LOAD BLOG POSTS FOR BLOG PAGE ---
+    const blogPostsContainer = document.getElementById('blog-posts');
+    if (blogPostsContainer) {
+        loadBlogPosts();
+    }
+
+    function loadBlogPosts() {
+        fetch('posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                const blogPostsContainer = document.getElementById('blog-posts');
+                blogPostsContainer.innerHTML = ''; // Clear any existing content
+
+                posts.forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.className = 'bg-gray-900 rounded-lg overflow-hidden shadow-lg';
+
+                    const title = post[`title${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                    const date = post[`date${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                    const excerpt = post[`excerpt${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+                    const fullContent = post[`fullContent${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`];
+
+                    postElement.innerHTML = `
+                        <img src="${post.image}" alt="${title}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">${title}</h3>
+                            <p class="text-sm text-gray-400 mb-2">${date}</p>
+                            <p class="text-gray-400 text-sm mb-4">${excerpt}</p>
+                            <button class="read-more-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition-colors" data-lang-en="Read More" data-lang-fr="Lire la Suite">Read More</button>
+                        </div>
+                    `;
+
+                    // Set data attribute for full content
+                    postElement.setAttribute(`data-full-content-${currentLang}`, fullContent);
+
+                    blogPostsContainer.appendChild(postElement);
+                });
+
+                // Re-attach event listeners for the new buttons
+                attachReadMoreListeners();
+            })
+            .catch(error => {
+                console.error('Error loading blog posts:', error);
+                const blogPostsContainer = document.getElementById('blog-posts');
+                blogPostsContainer.innerHTML = '<p class="text-center text-gray-400">Error loading blog posts.</p>';
+            });
+    }
+
+    function attachReadMoreListeners() {
+        const readMoreBtns = document.querySelectorAll('.read-more-btn');
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.bg-gray-900');
+                const title = card.querySelector('h3').textContent;
+                const date = card.querySelector('p:nth-of-type(1)').textContent;
+
+                modalTitle.textContent = title;
+                modalDate.textContent = date;
+
+                const fullContent = card.getAttribute(`data-full-content-${currentLang}`);
+                
+                if (fullContent) {
+                    modalContent.innerHTML = fullContent;
+                } else {
+                    // Fallback
+                    const excerpt = card.querySelector('p:nth-of-type(2)').textContent;
+                    const fullContentEn = `<p>${excerpt}</p><p>This is where the full blog post content would appear. For this demo, we are only showing the excerpt.</p>`;
+                    const fullContentFr = `<p>${excerpt}</p><p>C'est ici que le contenu complet de l'article de blog apparaîtrait. Pour cette démo, nous ne montrons que l'extrait.</p>`;
+                    modalContent.innerHTML = (currentLang === 'en') ? fullContentEn : fullContentFr;
+                }
+                
+                modal.classList.remove('hidden');
+            });
+        });
+    }
 });

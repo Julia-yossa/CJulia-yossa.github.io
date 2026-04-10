@@ -20,6 +20,16 @@
 .typing-cursor {
   animation: blink 0.75s step-end infinite;
 }
+
+body {
+  background-image: url('corner_flowers.png'), url('corner_flowers.png');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #111827; /* Tailwind gray-900 */
+  background-blend-mode: screen;
+  background-size: 300px, 300px;
+}
+
 .art-grid {
   background:
     radial-gradient(circle at top left, rgba(129, 140, 248, 0.28), transparent 42%),
